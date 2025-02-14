@@ -1,4 +1,4 @@
-package coursOC;
+package exercise;
 
 public class Exercice {
 

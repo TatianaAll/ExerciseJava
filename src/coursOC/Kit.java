@@ -10,14 +10,7 @@ public class Kit {
 	private Set<String> keywords = new LinkedHashSet<String>();
 	
 	public Kit() {
-		blocks.add(0, new Wall(true, 3, 2, 2));
-		blocks.add(1, new Wall(true, 3, 2, 2));
-		blocks.add(2, new Wall(false, 2, 1, 2));
-		blocks.add(3, new Wall(false, 2, 1, 2));
-		blocks.add(4, new Door(true, 1, 2, 2));
-		
-		keywords.add("cabane");
-		keywords.add("muraille");
+
 	}
 	
 	public void showKit() {
@@ -25,6 +18,14 @@ public class Kit {
 		for(String keyword : keywords) {
 			System.out.println(keyword);
 		}
+	}
+	
+	public Set<String> getKeywords() {
+		return keywords;
+	}
+	
+	public List<Block> getBlocks() {
+		return blocks;
 	}
 	
 }

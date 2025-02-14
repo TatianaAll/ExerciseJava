@@ -9,6 +9,9 @@ public abstract class Block implements IBlock {
 	protected Color color;
 	
 	protected Block(final int length, final int width, final int height) {
+		if(length < MIN_LENGTH || width < MIN_WIDTH || height < MIN_HEIGHT) {
+			throw new IllegalArgumentException();
+		}
 		this.length = length;
 		this.width = width;
 		this.height = height;
