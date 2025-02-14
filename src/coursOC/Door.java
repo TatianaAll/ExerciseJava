@@ -17,4 +17,11 @@ public class Door extends Block {
 		} else return false;
 	}
 	
+	public void lockTheDoor() throws LockedDoorException {
+		if(!locked) {
+			locked = true;
+		} else {
+			throw new LockedDoorException();
+		}
+	}
 }
